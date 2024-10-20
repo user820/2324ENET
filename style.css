@@ -64,7 +64,7 @@ body{
     font-size: 36px;
     font-weight: bold;
     vertical-align: middle;
-    font-family: "Creepster", system-ui;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .correct {
@@ -108,12 +108,12 @@ body{
     width: 80px;
     height: 60px;
     background: #c9b499;
-    font-family: Creepster;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #hint{
     font-size: 30px;
-    font-family: Creepster;
+    font-family: Arial, Helvetica, sans-serif;
     background: brown;
     color: white;
     letter-spacing: 2.5px;
