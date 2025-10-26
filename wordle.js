@@ -250,25 +250,42 @@ let attempts = 0;
 
 function update() {
     let correct = 0;
+    let letterCount = {}; // count letters in the word
+
+    // count each letter in the target word
+    for (let i = 0; i < word.length; i++) {
+        letterCount[word[i]] = (letterCount[word[i]] || 0) + 1;
+    }
+
+    // first pass: mark correct letters and decrease count
     for (let c = 0; c < width; c++) {
         let currTile = document.getElementById(row.toString() + '-' + c.toString());
         let letter = currTile.innerText;
 
-        //Is it in the correct position?
-        if (word[c] == letter) {
+        if (word[c] === letter) {
             currTile.classList.add("correct");
             correct += 1;
-        } // Is it in the word?
-        else if (word.includes(letter)) {
-            currTile.classList.add("present");
-        } // Not in the word
-        else {
-            currTile.classList.add("absent");
+            letterCount[letter] -= 1;
         }
+    }
 
-        if (correct == width) {
-            gameOver = true;
+    // second pass: mark present or absent letters based on remaining counts
+    for (let c = 0; c < width; c++) {
+        let currTile = document.getElementById(row.toString() + '-' + c.toString());
+        let letter = currTile.innerText;
+
+        if (!currTile.classList.contains("correct")) {
+            if (letterCount[letter] > 0) {
+                currTile.classList.add("present");
+                letterCount[letter] -= 1;
+            } else {
+                currTile.classList.add("absent");
+            }
         }
+    }
+
+    if (correct === width) {
+        gameOver = true;
     }
 
     attempts++;
