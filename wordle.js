@@ -2,7 +2,7 @@ var height = 6; // number of guesses
 var width = 5; // number of letters
 
 var row = 0; // current guess (attempt)
-var col = 0; // current letter for that attempt
+var col = 0; // current letter for that attempt.
 
 
 const halloweenWordlist = [
@@ -333,4 +333,5 @@ function update() {
         document.getElementById("hint").innerText = "Hint: " + hint;
     }
 }
+
 
