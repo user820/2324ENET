@@ -6,102 +6,139 @@ var col = 0; // current letter for that attempt
 
 
 const halloweenWordlist = [
-    "BATTY",
-    "BONES",
-    "BRAIN",
-    "CANDY",
-    "CLOWN",
-    "CURSE",
-    "DEATH",
-    "DEMON",
-    "DEVIL",
-    "FANGS",
-    "GHOST",
-    "GHOUL",
-    "GRAVE",
-    "HAUNT",
-    "HEADS",
-    "HEART",
-    "KNIFE",
-    "MAGIC",
-    "MUMMY",
-    "NIGHT",
-    "NURSE",
-    "PASTE",
-    "RAVEN",
-    "RULER",
-    "SCARE",
-    "SKULL",
-    "SNAKE",
-    "SPELL",
-    "SPINE",
-    "STAKE",
-    "STONE",
-    "TOMBS",
-    "TOXIC",
-    "VENOM",
-    "WITCH",
-    "WOUND",
-    "BLOOD",
-    "BROOM",
-    "COVEN",
-    "CREEP",
-    "CRYPT",
-    "DANCE",
-    "DARKY",
-    "DREAD",
-    "FEARS",
-    "FIEND",
-    "GNOME"
-];
+  "CLASS",
+  "TEACH",
+  "LEARN",
+  "STUDY",
+  "GRADE",
+  "BOARD",
+  "CHAIR",
+  "PAPER",
+  "BOOKS",
+  "WRITE",
+  "PLANT",
+  "METAL",
+  "SOLID",
+  "LIGHT",
+  "SOUND",
+  "POWER",
+  "EARTH",
+  "COUNT",
+  "SOLVE",
+  "EQUAL",
+  "APPLE",
+  "GRAPE",
+  "LEMON",
+  "MELON",
+  "PEACH",
+  "MANGO",
+  "ONION"
+  "PIZZA",
+  "PASTA",
+  "SUSHI",
+  "STEAK",
+  "BACON",
+  "SALAD",
+  "BREAD",
+  "TOAST",
+  "CREAM",
+  "FLOUR",
+  "SUGAR",
+  "HONEY",
+  "CANDY",
+  "DONUT",
+  "WATER",
+  "JUICE",
+  "RULER",
+  "CHALK",
+  "PAINT",
+  "BRUSH",
+  "STAMP",
+  "DIARY",
+  "CHAIR",
+  "DESKS",
+  "TABLE",
+  "SHELF",
+  "CLOCK",
+  "BOARD",
+  "BELLS",
+  "FLAGS",
+  "BOOKS",
+  "FILES",
+  "NOTES",
+  "CARDS",
+  "SHEET",
+  "PAGES",
+  "GUIDE"
+]
+
 const halloweenDefList = [
-    "A flying mammal, often associated with vampires and darkness.", // BATTY
-    "The skeletal remains of a dead body.", // BONES
-    "The organ of the body that controls thought, emotion, and behavior.", // BRAIN
-    "A sweet food, often given out to children on Halloween.", // CANDY
-    "A person who wears a costume and makeup to entertain or scare others.", // CLOWN
-    "A magical spell or incantation, often used to harm or control others.", // CURSE
-    "The end of life, often associated with the supernatural and the afterlife.", // DEATH
-    "A malevolent spirit or supernatural being, often depicted as evil or unclean.", // DEMON
-    "The ruler of hell, often depicted as a horned, pitchfork-wielding figure.", // DEVIL
-    "Sharp, pointed teeth, often associated with vampires and other supernatural creatures.", // FANGS
-    "A spirit or specter, often believed to haunt a particular place or location.", // GHOST
-    "A creature from folklore, often depicted as a monster or evil being.", // GHOUL
-    "A place where dead bodies are buried, often associated with the supernatural and the afterlife.", // GRAVE
-    "To visit or inhabit a place, often in a supernatural or ghostly manner.", // HAUNT
-    "The upper part of the human body, often associated with the brain and the senses.", // HEADS
-    "A vital organ that pumps blood through the body, often associated with love and emotion.", // HEART
-    "A sharp, pointed object used for cutting or stabbing, often associated with violence and harm.", // KNIFE
-    "A mysterious or supernatural power, often used for good or evil.", // MAGIC
-    "A creature from ancient Egyptian folklore, often depicted as a wrapped, bandaged figure.", // MUMMY
-    "The time of day when the sun is below the horizon, often associated with darkness and the supernatural.", // NIGHT
-    "A person who cares for the sick or injured, often in a hospital or medical setting.", // NURSE
-    "A sticky, adhesive substance, often used to attach or bond objects together.", // PASTE
-    "A large, black bird, often associated with death and the supernatural.", // RAVEN
-    "A person who has power or authority over others, often in a government or leadership role.", // RULER
-    "To frighten or intimidate someone, often in a playful or joking manner.", // SCARE
-    "The bony structure of the head, often associated with death and the supernatural.", // SKULL
-    "A long, slender, legless reptile, often associated with danger and venom.", // SNAKE
-    "A magical or supernatural formula, often used to achieve a specific goal or outcome.", // SPELL
-    "The series of bones that extend from the base of the skull to the tailbone, often associated with the nervous system.", // SPINE
-    "A sharp, pointed object used for piercing or stabbing, often associated with vampires and other supernatural creatures.", // STAKE
-    "A hard, rocky substance, often used for building or construction.", // STONE
-    "A place where dead bodies are buried, often associated with the supernatural and the afterlife.", // TOMBS
-    "A poisonous or deadly substance, often used to harm or kill others.", // TOXIC
-    "A poisonous or deadly substance, often used to harm or kill others.", // VENOM
-    "A person, often a woman, who practices magic or witchcraft, often in a supernatural or occult manner.", // WITCH
-    "An injury or hurt, often physical or emotional.", // WOUND
-    "A vital fluid that circulates through the body, often associated with life and vitality.", // BLOOD
-    "A household object used for sweeping or cleaning, often associated with witches and magic.", // BROOM
-    "A group of witches or people who practice magic or witchcraft, often in a supernatural or occult manner.", // COVEN
-    "To move slowly and quietly, often in a sneaky or stealthy manner.", // CREEP
-    "A place where dead bodies are buried, often associated with the supernatural and the afterlife.", // CRYPT
-    "To move one's body in a rhythmic or expressive manner, often to music or in celebration.", // DANCE
-    "Having a dark or gloomy quality, often associated with the supernatural or the unknown.", // DARKY
-    "A feeling of fear or anxiety, often in anticipation of something bad or unpleasant.", // DREAD
-    "A strong feeling of fear or anxiety, often in anticipation of something bad or unpleasant.", // FEARS
-    "A wicked or evil spirit, often depicted as a monster or supernatural being.", // FIEND
-    "A small, mischievous supernatural being, often depicted as a short, ugly creature.", // GNOME
+  "A group of students in a learning environment.",
+  "To instruct or educate others.",
+  "To gain knowledge or skills.",
+  "To review or practice material for learning.",
+  "A mark or score for academic work.",
+  "A board for writing or displaying information in class.",
+  "A seat for one person.",
+  "Material used for writing or printing.",
+  "A collection of written or printed pages bound together.",
+  "To put words on paper or a board.",
+  "A living organism in the plant kingdom.",
+  "A solid material that conducts electricity and heat.",
+  "A firm state of matter with a definite shape.",
+  "Form of visible energy from the sun or a bulb.",
+  "Vibrations that can be heard by our ears.",
+  "The ability to do work or act.",
+  "The planet we live on.",
+  "To determine the number of items.",
+  "To find an answer to a problem.",
+  "Having the same value or amount.",
+  "A round fruit, often red or green.",
+  "A small, juicy fruit that grows in bunches.",
+  "A yellow, sour citrus fruit.",
+  "A round, sweet fruit with a green rind.",
+  "A soft, sweet fruit with fuzzy skin.",
+  "A tropical orange-yellow fruit.",
+  "A vegetable with layers and a strong smell.",
+  "Flat bread with sauce, cheese, and toppings.",
+  "An Italian noodle dish.",
+  "A Japanese dish of rice and raw fish.",
+  "A slice of cooked beef.",
+  "A salty, crispy pork meat often eaten at breakfast.",
+  "A mix of raw vegetables.",
+  "A staple food made from baked dough.",
+  "Bread browned from heating.",
+  "Thick milk used in cooking or desserts.",
+  "Powder made from ground grains, used in baking.",
+  "A sweet ingredient made from sugarcane or beets.",
+  "A sweet, sticky food made by bees.",
+  "A sweet food, often eaten as a treat.",
+  "A fried ring-shaped sweet treat.",
+  "The clear, tasteless liquid needed for life.",
+  "A drink made from the liquid of fruits.",
+  "A tool used to measure length.",
+  "White or colored sticks for writing on boards.",
+  "Colored substance used for art.",
+  "A tool for applying paint.",
+  "A tool for marking paper with ink.",
+  "A notebook used to record daily events.",
+  "A chair is a seat for one.",
+  "Small tables used by students to work at.",
+  "A piece of furniture with a flat surface and legs.",
+  "A shelf is used for storing things.",
+  "A device that shows time.",
+  "A board for instructions or writing in class.",
+  "Ringing devices to signal time in school.",
+  "A cloth symbol representing a country.",
+  "Books contain written, printed, or illustrated information.",
+  "Folders for organizing papers.",
+  "Short, written reminders for study.",
+  "Small pieces of card used for learning.",
+  "A single piece of paper.",
+  "Pages are single sheets in a book.",
+  "Directions or explanations to help understand something."
+];
+
 ];
 
 var gameOver = false;
@@ -296,3 +333,4 @@ function update() {
         document.getElementById("hint").innerText = "Hint: " + hint;
     }
 }
+
