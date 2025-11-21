@@ -32,7 +32,7 @@ const halloweenWordlist = [
   "MELON",
   "PEACH",
   "MANGO",
-  "ONION"
+  "ONION",
   "PIZZA",
   "PASTA",
   "SUSHI",
@@ -139,7 +139,6 @@ const halloweenDefList = [
   "Directions or explanations to help understand something."
 ];
 
-];
 
 var gameOver = false;
 let randomIndex = Math.floor(Math.random() * halloweenWordlist.length);
@@ -333,5 +332,6 @@ function update() {
         document.getElementById("hint").innerText = "Hint: " + hint;
     }
 }
+
 
 
